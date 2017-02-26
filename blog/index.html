@@ -1,0 +1,24 @@
+---
+layout: default
+title: Wedding Updates
+description: We're going to update this with wedding stuff.
+---
+	<header class="subpage">
+             <h1>Wedding Updates</h1>
+             <p>Check here to get the latest on our wedding.</p>
+        </header>
+      </div>
+      </div>
+      <div class="container">
+         <div id="selected_work">
+              <div id="works">
+              	  {% for post in site.posts %}
+                  <div class="work_line"> 
+                      <a href="{{ post.url }}">
+                      <div class="project_title">{{ post.title }}</div>
+                      <div class="project_info date">{{ post.date | date_to_string }}</div>
+                      </a>
+                  </div>
+                {% endfor %}	
+              </div>
+         </div>
